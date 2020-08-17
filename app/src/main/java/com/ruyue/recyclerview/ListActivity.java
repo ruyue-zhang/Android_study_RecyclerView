@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListActivity extends AppCompatActivity {
-    List<Data> myList= new ArrayList<>();
+    private List<Data> myList= new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,11 @@ public class ListActivity extends AppCompatActivity {
         myList.add(new Data("title8", "desp8", 8));
         myList.add(new Data("title9", "desp9", 9));
         myList.add(new Data("title10", "desp10", 10));
+        myList.add(new Data("title11", "desp11", 11));
+        myList.add(new Data("title12", "desp12", 12));
+        myList.add(new Data("title13", "desp13", 13));
+        myList.add(new Data("title14", "desp14", 14));
+        myList.add(new Data("title15", "desp15", 15));
     }
 
 
