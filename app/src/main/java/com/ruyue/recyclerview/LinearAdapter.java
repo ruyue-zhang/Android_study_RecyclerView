@@ -11,27 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearViewHolder> {
-    private Context myContext;
-
-    private List<String> list;
-
-    public LinearAdapter(Context context) {
-        this.myContext = context;
-    }
-    @Override
-    public LinearAdapter.LinearViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new LinearViewHolder(LayoutInflater.from(myContext).inflate(R.layout.linear_layout, parent, false));
-    }
-
-    @Override
-    public void onBindViewHolder(LinearViewHolder holder, int position) {
-        holder.textView.setText("11111");
-    }
-
-    @Override
-    public int getItemCount() {
-        return 10;
-    }
+    private List<Data> myList;
 
     public static class LinearViewHolder extends RecyclerView.ViewHolder {
         private TextView textView;
@@ -40,5 +20,27 @@ class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearViewHolder>
             textView = itemView.findViewById(R.id.data_list);
         }
     }
+
+    public LinearAdapter(List<Data> myList) {
+        this.myList = myList;
+    }
+
+    @Override
+    public LinearAdapter.LinearViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new LinearViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.linear_layout, parent, false));
+    }
+
+    @Override
+    public void onBindViewHolder(LinearViewHolder holder, int position) {
+        Data data = myList.get(position);
+        holder.textView.setText(data.getTitle() + data.getNumber() + data.description);
+    }
+
+    @Override
+    public int getItemCount() {
+        return myList.size();
+    }
+
+
 }
 
