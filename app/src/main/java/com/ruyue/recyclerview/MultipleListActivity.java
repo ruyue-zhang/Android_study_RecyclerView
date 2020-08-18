@@ -9,6 +9,7 @@ import android.os.Bundle;
 import java.util.ArrayList;
 
 public class MultipleListActivity extends AppCompatActivity {
+    public static final int DATA_SIZE = 30;
     private ArrayList<Data> dataList;
 
     @Override
@@ -28,11 +29,11 @@ public class MultipleListActivity extends AppCompatActivity {
     }
 
     private void dataInit() {
-        for (int i = 0; i < 15; i++) {
-            if(i == 0) {
+        for (int i = 0; i < DATA_SIZE; i++) {
+            if(0 == i) {
                 dataList.add(new Data(Data.TYPE_HEADER, "This is header", null, i));
             } else {
-                dataList.add(new Data(Data.TYPE_ITEM, "title" + i, "desp" + i, i));
+                dataList.add(new Data(Data.TYPE_ITEM, "title"+ i, "desp" + i, i));
             }
 
         }

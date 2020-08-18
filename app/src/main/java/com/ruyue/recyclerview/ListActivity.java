@@ -10,39 +10,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListActivity extends AppCompatActivity {
-    private List<Data> myList= new ArrayList<>();
+    public static final int DATA_SIZE = 15;
+    private List<Data> myList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler_view);
 
+        myList = new ArrayList<>();
+        dataInit();
+
         RecyclerView myRecyclerView = findViewById(R.id.my_recyclerview);
         myRecyclerView.setHasFixedSize(true);
 
         myRecyclerView.setLayoutManager(new LinearLayoutManager(ListActivity.this));
-        initList();
         myRecyclerView.setAdapter(new ListAdapter(myList));
     }
 
-    private void initList() {
-        myList.add(new Data("title1", "desp1", 1));
-        myList.add(new Data("title2", "desp2", 2));
-        myList.add(new Data("title3", "desp3", 3));
-        myList.add(new Data("title4", "desp4", 4));
-        myList.add(new Data("title5", "desp5", 5));
-        myList.add(new Data("title6", "desp6", 6));
-        myList.add(new Data("title7", "desp7", 7));
-        myList.add(new Data("title8", "desp8", 8));
-        myList.add(new Data("title9", "desp9", 9));
-        myList.add(new Data("title10", "desp10", 10));
-        myList.add(new Data("title11", "desp11", 11));
-        myList.add(new Data("title12", "desp12", 12));
-        myList.add(new Data("title13", "desp13", 13));
-        myList.add(new Data("title14", "desp14", 14));
-        myList.add(new Data("title15", "desp15", 15));
+    private void dataInit() {
+        for (int i = 1; i < DATA_SIZE + 1; i++) {
+            myList.add(new Data("title" + i, "desp" + i, i));
+        }
     }
-
-
-
 }

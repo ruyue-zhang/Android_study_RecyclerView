@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ImageListActivity extends AppCompatActivity {
+    public static final int DATA_SIZE = 100;
     private List<Data> dataList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class ImageListActivity extends AppCompatActivity {
     }
 
     private void dataInit() {
-        for (int i = 0; i < 101; i++) {
+        for (int i = 0; i < DATA_SIZE; i++) {
             if(i == 0) {
                 dataList.add(new Data(Data.TYPE_HEADER, "This is header", null, i, null));
             } else {
