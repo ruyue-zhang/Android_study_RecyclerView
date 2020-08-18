@@ -76,13 +76,6 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     @Override
     public int getItemViewType(int position) {
-//        if(position == 0) {
-//            return TYPE_ITEM;
-//        } else if(position == 1){
-//            return TYPE_HEADER;
-//        } else {
-//            return -1;
-//        }
         switch (myList.get(position).getType()) {
             case 0:
                 return Data.TYPE_ITEM;
@@ -97,7 +90,5 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter<RecyclerView.View
     public int getItemCount() {
         return myList.size();
     }
-
-
 }
 

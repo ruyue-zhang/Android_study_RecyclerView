@@ -32,7 +32,9 @@ public class Data {
         this.avatar = avatar;
     }
 
-
+    public String getAvatar() {
+        return avatar;
+    }
 
     public int getType() {
         return type;
