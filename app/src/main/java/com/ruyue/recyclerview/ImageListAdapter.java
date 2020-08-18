@@ -17,7 +17,7 @@ package com.ruyue.recyclerview;
         import static com.ruyue.recyclerview.Data.TYPE_HEADER;
         import static com.ruyue.recyclerview.Data.TYPE_ITEM;
 
-public class ImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class ImageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<Data> myList;
     private Context myContext;
 
@@ -44,7 +44,7 @@ public class ImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
     }
 
-    public ImageAdapter(Context context, List<Data> myList) {
+    public ImageListAdapter(Context context, List<Data> myList) {
         this.myContext = context;
         this.myList = myList;
     }
@@ -55,10 +55,10 @@ public class ImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         View view;
 
         if(viewType == TYPE_HEADER) {
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.head_layout, parent, false);
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.multiple_list_layout, parent, false);
             return new HeadViewHolder(view);
         } else if(viewType == TYPE_ITEM){
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.add_img_layout, parent, false);
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.img_layout, parent, false);
             return new ImageViewHolder(view);
         } else {
             return null;

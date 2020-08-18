@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         jumpToMultipleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MultipleActivity.class);
+                Intent intent = new Intent(MainActivity.this, MultipleListActivity.class);
                 startActivity(intent);
             }
         });

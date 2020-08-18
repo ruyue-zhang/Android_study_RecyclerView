@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearViewHolder> {
+public class ListAdapter extends RecyclerView.Adapter<ListAdapter.LinearViewHolder> {
     private List<Data> myList;
 
     static class LinearViewHolder extends RecyclerView.ViewHolder {
@@ -27,14 +27,14 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
         }
     }
 
-    public LinearAdapter(List<Data> myList) {
+    public ListAdapter(List<Data> myList) {
         this.myList = myList;
     }
 
     @NonNull
     @Override
     public LinearViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.linear_layout, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_layout, parent, false);
         return new LinearViewHolder(view);
     }
 

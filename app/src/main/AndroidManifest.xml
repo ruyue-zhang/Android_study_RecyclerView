@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".ImageListActivity"></activity>
-        <activity android:name=".MultipleActivity" />
+        <activity android:name=".MultipleListActivity" />
         <activity android:name=".ListActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

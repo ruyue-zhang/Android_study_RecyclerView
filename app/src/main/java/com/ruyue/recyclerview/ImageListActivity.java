@@ -14,13 +14,13 @@ public class ImageListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_image_list);
+        setContentView(R.layout.recycler_view);
 
         dataList = new ArrayList<>();
         dataInit();
 
         RecyclerView myRecyclerView = findViewById(R.id.my_recyclerview);
-        ImageAdapter adapter = new ImageAdapter(this, dataList);
+        ImageListAdapter adapter = new ImageListAdapter(this, dataList);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         myRecyclerView.setLayoutManager(layoutManager);
         myRecyclerView.setAdapter(adapter);

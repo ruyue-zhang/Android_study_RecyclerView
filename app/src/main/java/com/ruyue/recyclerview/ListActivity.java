@@ -15,14 +15,14 @@ public class ListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
+        setContentView(R.layout.recycler_view);
 
         RecyclerView myRecyclerView = findViewById(R.id.my_recyclerview);
         myRecyclerView.setHasFixedSize(true);
 
         myRecyclerView.setLayoutManager(new LinearLayoutManager(ListActivity.this));
         initList();
-        myRecyclerView.setAdapter(new LinearAdapter(myList));
+        myRecyclerView.setAdapter(new ListAdapter(myList));
     }
 
     private void initList() {

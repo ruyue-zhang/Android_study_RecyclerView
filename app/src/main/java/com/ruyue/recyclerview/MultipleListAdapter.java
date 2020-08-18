@@ -14,7 +14,7 @@ import java.util.List;
 import static com.ruyue.recyclerview.Data.TYPE_HEADER;
 import static com.ruyue.recyclerview.Data.TYPE_ITEM;
 
-public class MultiViewTypeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class MultipleListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<Data> myList;
 
     static class MultiViewHolder extends RecyclerView.ViewHolder {
@@ -38,7 +38,7 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter<RecyclerView.View
         }
     }
 
-    public MultiViewTypeAdapter(List<Data> myList) {
+    public MultipleListAdapter(List<Data> myList) {
         this.myList = myList;
     }
 
@@ -48,10 +48,10 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter<RecyclerView.View
 
         if(viewType == TYPE_HEADER) {
             Log.d("viewType:", String.valueOf(viewType));
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.head_layout, parent, false);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.multiple_list_layout, parent, false);
             return new HeadViewHolder(view);
         } else if(viewType == TYPE_ITEM){
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.linear_layout, parent, false);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_layout, parent, false);
             return new MultiViewHolder(view);
         } else {
             return null;
