@@ -8,8 +8,8 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/jump_to_recyclerView"
-      android:layout_width="150dp"
+      android:id="@+id/jump_to_recyclerView"
+      android:layout_width="@dimen/button_width"
       android:layout_height="wrap_content"
       android:text="@string/RecyclerView"
       android:textAllCaps="false"
@@ -20,7 +20,7 @@
 
     <Button
         android:id="@+id/jump_to_multiple"
-        android:layout_width="150dp"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:text="@string/Multiple"
         android:textAllCaps="false"
@@ -30,7 +30,7 @@
 
     <Button
         android:id="@+id/jump_to_image"
-        android:layout_width="150dp"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:text="@string/Image"
         android:textAllCaps="false"

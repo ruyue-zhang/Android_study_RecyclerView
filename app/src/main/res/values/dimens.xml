@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="text_size">18sp</dimen>
+    <dimen name="button_width">150dp</dimen>
+    <dimen name="start_margin">40dp</dimen>
+    <dimen name="top_margin">10dp</dimen>
+    <dimen name="end_margin">60dp</dimen>
+    <dimen name="image_width">50dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="width_70dp">70dp</dimen>
 </resources>

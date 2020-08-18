@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/border"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
-    android:layout_margin="20dp" >
+    android:layout_height="@dimen/width_70dp"
+    android:layout_margin="@dimen/margin_20dp" >
 
     <TextView
         android:id="@+id/data_head"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/top_margin"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
