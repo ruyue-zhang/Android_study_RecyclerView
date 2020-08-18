@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent;
             switch(view.getId()) {
                 case R.id.jump_to_recyclerView:
-                    intent = new Intent(MainActivity.this, MultipleListActivity.class);
+                    intent = new Intent(MainActivity.this, ListActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.jump_to_multiple:
-                    intent = new Intent(MainActivity.this, ListActivity.class);
+                    intent = new Intent(MainActivity.this, MultipleListActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.jump_to_image:

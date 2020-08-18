@@ -1,5 +1,6 @@
 package com.ruyue.recyclerview;
 
+        import android.annotation.SuppressLint;
         import android.content.Context;
         import android.view.LayoutInflater;
         import android.view.View;
@@ -51,21 +52,22 @@ public class ImageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
-
-        if(viewType == TYPE_HEADER) {
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.multiple_list_layout, parent, false);
-            return new HeadViewHolder(view);
-        } else if(viewType == TYPE_ITEM){
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.img_layout, parent, false);
-            return new ImageViewHolder(view);
-        } else {
-            return null;
+        switch(viewType) {
+            case TYPE_HEADER:
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.multiple_list_layout, parent, false);
+                return new HeadViewHolder(view);
+            case TYPE_ITEM:
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.img_layout, parent, false);
+                return new ImageViewHolder(view);
+            default:
+                return null;
         }
     }
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         Data data = myList.get(position);
@@ -76,7 +78,7 @@ public class ImageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                     break;
                 case TYPE_ITEM:
                     ((ImageViewHolder) holder).dataTitle.setText(data.getTitle());
-                    ((ImageViewHolder) holder).dataNumber.setText(data.getNumber() + "");
+                    ((ImageViewHolder) holder).dataNumber.setText(Integer.toString(data.getNumber()));
                     ((ImageViewHolder) holder).dataDesc.setText(data.getDescription());
                     Glide.with(myContext).load(data.getAvatar()).into(((ImageViewHolder)holder).avatar);
                     break;
