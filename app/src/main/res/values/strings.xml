@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">RecyclerView</string>
     <string name="RecyclerView">RecyclerView</string>
+    <string name="Multiple">Multiple</string>
 </resources>

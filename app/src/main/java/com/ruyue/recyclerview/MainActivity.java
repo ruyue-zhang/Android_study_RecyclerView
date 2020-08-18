@@ -15,6 +15,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button jumpToRecyclerViewBtn = findViewById(R.id.jump_to_recyclerView);
+        Button jumpToMultipleBtn = findViewById(R.id.jump_to_multiple);
+
+        jumpToMultipleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MultipleActivity.class);
+                startActivity(intent);
+            }
+        });
         jumpToRecyclerViewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
