@@ -8,6 +8,8 @@ public class Data {
     public String title;
     public String description;
     public int number;
+    public String avatar;
+
 
     public Data(String title, String description, int number) {
         this.title = title;
@@ -22,10 +24,20 @@ public class Data {
         this.number = number;
     }
 
+    public Data(int type, String title, String description, int number, String avatar) {
+        this.type = type;
+        this.title = title;
+        this.description = description;
+        this.number = number;
+        this.avatar = avatar;
+    }
+
+
 
     public int getType() {
         return type;
     }
+
     public String getTitle() {
         return title;
     }
